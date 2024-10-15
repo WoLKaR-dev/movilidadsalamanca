@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "JostRegular";
+    src: url(Jost-Regular.ttf);
+}
+@font-face {
+    font-family: "JostSemiBold";
+    src: url(Jost-SemiBold.ttf);
+}
+@font-face {
+    font-family: "JostBold";
+    src: url(Jost-Bold.ttf);
+}
+
+body{
+    background-color: snow;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#contenedorListaLineas{
+    background-color: #FA824C;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+#contenedor {
+    background-color: #303633;
+    border: none;
+    border-radius: 10px;
+    color: snow;
+    font-family: JostRegular;
+    margin-bottom: 5%;
+    /* No centramos todo el contenido del contenedor */
+}
+
+#introducir {
+    display: block; /* Hace que el input se comporte como un bloque */
+    margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
+    background-color: #FA824C;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: JostRegular;
+    padding: 10px; /* Espacio interno dentro del input */
+    width: 50%; /* Controla el ancho del input si es necesario */
+    color: snow;
+    text-align: center;
+}
+
+#titulo{
+    background-color: #FA824C;
+    font-family: JostSemiBold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+}
+
+#parrafo{
+    color: snow;
+    justify-content: left;
+    margin-left: 5%;
+}
+#tituloGrande{
+    font-family: JostBold;
+    color: #303633;
+    text-align: center;
+    text-wrap:wrap;
+}
+#descripcion{
+    color: #303633;
+    text-align: center;
+    justify-content: center;
+    font-family: JostSemiBold;
+}
+
+#boton{
+    display: block; /* Hace que el input se comporte como un bloque */
+    margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
+    background-color: #3C91E6;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: JostRegular;
+    padding: 10px; /* Espacio interno dentro del input */
+    width: 50%; /* Controla el ancho del input si es necesario */
+    color: snow;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#opcion{
+    background-color: #9FC356;
+    display: block; /* Hace que el input se comporte como un bloque */
+    margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
+    margin-bottom: 2px;
+    border: none;
+    border-radius: 10px;
+    font-size: 10px;
+    font-family: JostSemiBold;
+    padding: 10px; /* Espacio interno dentro del input */
+    width: 50%; /* Controla el ancho del input si es necesario */
+    color: #303633;
+    text-align: center;
+}
