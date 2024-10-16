@@ -18,7 +18,6 @@ a{
     text-decoration: none;
     color: inherit;
 }
-
 #contenedorListaLineas{
     background-color: #FA824C;
     border: none;
@@ -105,4 +104,24 @@ a{
     width: 50%; /* Controla el ancho del input si es necesario */
     color: #303633;
     text-align: center;
+}
+
+#botonLinea{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    background-color: #FA824C;
+    color: snow;
+    font-size: 15px;
+    text-align: center;
+    text-wrap: wrap;
+    justify-content: center;
+    font-family: JostRegular;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+#linea1{
+    display: none;
 }
