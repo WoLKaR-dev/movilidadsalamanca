@@ -1,3 +1,23 @@
+:root{
+    --color-fondo : #ffffff;
+    --color-titulo-contenedor: #4daa57;
+    --color-titulo-texto: #f0fff1;
+    --color-fondo-contenedor: #393e41;
+    --color-texto-contendor: #ffffff;
+    --color-texto: #080705;
+    --color-leyenda1: #3a5683;
+    --color-leyenda-texto: #d8e7ff;
+    --color-fondo-opciones : #3a5683;
+    --color-texto-opciones: #d8e7ff;
+    --color-boton-input: #4ab164;
+    --color-texto-boton-input: #393e41;
+    --boton-busqueda-fondo: #68c062;
+    --boton-busqueda-texto: #f0fff1;
+    --color-fonfo-tuparada:#acccff;
+    --color-fondo-botonbuscar: #528b60;
+    --color-texto-botonbuscar:#f0fff1;
+}
+
 @font-face {
     font-family: "JostRegular";
     src: url(Jost-Regular.ttf);
@@ -12,14 +32,30 @@
 }
 
 body{
-    background-color: snow;
+    background-color: var(--color-fondo);
 }
 a{
     text-decoration: none;
     color: inherit;
 }
+
+#busquedaRapidaLinea{
+    display: block; /* Hace que el input se comporte como un bloque */
+    margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
+    background-color: var(--boton-busqueda-fondo);
+    color: var(--boton-busqueda-texto);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: JostRegular;
+    padding: 10px; /* Espacio interno dentro del input */
+    width: 50%; /* Controla el ancho del input si es necesario */
+    text-align: center;
+    margin-bottom: 5px;
+}
+
 #contenedorListaLineas{
-    background-color: #FA824C;
+    background-color: var(--color-titulo-contenedor);
     border: none;
     border-radius: 10px;
     margin: 5px;
@@ -27,7 +63,7 @@ a{
     text-decoration: none;
 }
 #contenedor {
-    background-color: #303633;
+    background-color: var(--color-fondo-contenedor);
     border: none;
     border-radius: 10px;
     color: snow;
@@ -39,29 +75,31 @@ a{
 #introducir {
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
-    background-color: #FA824C;
+    background-color: var(--color-boton-input);
     border: none;
     border-radius: 10px;
     font-size: 20px;
     font-family: JostRegular;
     padding: 10px; /* Espacio interno dentro del input */
     width: 50%; /* Controla el ancho del input si es necesario */
-    color: snow;
+    color: var(--color-texto-boton-input);
     text-align: center;
 }
 
 #titulo{
-    background-color: #FA824C;
+    background-color: var(--color-titulo-contenedor);
     font-family: JostSemiBold;
     text-align: center;
     border: none;
     border-radius: 8px;
+    color: var(--color-titulo-texto);
 }
 
 #parrafo{
-    color: snow;
+    color: var(--color-texto-contendor);
     justify-content: left;
     margin-left: 5%;
+    font-family: JostSemiBold;
 }
 #tituloGrande{
     font-family: JostBold;
@@ -79,30 +117,31 @@ a{
 #boton{
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
-    background-color: #3C91E6;
+    background-color: var(--color-fondo-botonbuscar);
+    color: var(--color-texto-botonbuscar);
     border: none;
     border-radius: 10px;
     font-size: 15px;
     font-family: JostRegular;
     padding: 10px; /* Espacio interno dentro del input */
     width: 50%; /* Controla el ancho del input si es necesario */
-    color: snow;
     text-align: center;
     margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 #opcion{
-    background-color: #9FC356;
+    background-color: var(--color-fondo-opciones);
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
     margin-bottom: 2px;
     border: none;
     border-radius: 10px;
-    font-size: 10px;
-    font-family: JostSemiBold;
+    font-size: 12px;
+    font-family: JostRegular;
     padding: 10px; /* Espacio interno dentro del input */
     width: 50%; /* Controla el ancho del input si es necesario */
-    color: #303633;
+    color: var(--color-texto-opciones);
     text-align: center;
 }
 
@@ -110,8 +149,8 @@ a{
     display: block;
     margin: 0 auto;
     width: 90%;
-    background-color: #FA824C;
-    color: snow;
+    background-color: var(--color-fondo-opciones);
+    color: var(--color-texto-opciones);
     font-size: 15px;
     text-align: center;
     text-wrap: wrap;
@@ -122,6 +161,49 @@ a{
     margin-bottom: 5px;
 }
 
+
+
+#tablaHorarios{
+    border-collapse: collapse;
+    margin: auto;
+    width: 80%;
+}
+
+#celdaEncabezado{
+    border: 1px solid;
+    padding: 8px;
+    background-color: var(--color-leyenda1);
+    color: var(--color-texto);
+    text-align: center;
+    border-color: #000000;
+    color: var(--color-leyenda-texto);
+}
+
+#celdaTabla{
+    border: 1px solid;
+    padding: 8px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+    text-wrap: wrap;
+}
+
+/* LINEAS --------------------
+--------------------------------
+------------------------------*/
 #linea1{
+    display: none;
+}
+
+#linea1variante1{
+    display: none;
+}
+#linea1variante2{
+    display: none;
+}
+#linea1variante3{
+    display: none;
+}
+#linea1variante4{
     display: none;
 }

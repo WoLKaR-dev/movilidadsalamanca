@@ -1,6 +1,6 @@
 //obtiene el numero del box:
 function redirigir() {
-    var numero = document.getElementById("introducir").value;
+    var numero = document.getElementById("busquedaRapidaLinea").value;
     var paginas = {
         1: document.getElementById("linea1"),
         2: "linea2.html",
@@ -50,16 +50,53 @@ function nuevaLinea(linea) {
     window.location.href = "lineas.html";
 }
 
+function nuevaVariante1(numeroVariante, numeroLinea) {
+    var variantes;
+    
+    if (numeroLinea == 1) {
+        variantes = {
+            1: document.getElementById("linea1variante1"),
+            2: document.getElementById("linea1variante2"),
+        };
+    } else if (numeroLinea == 7) {
+        // Aquí puedes definir las variantes de la línea 7
+        variantes = {
+            // Define las variantes de línea 7
+        };
+    }
+
+    if (variantes) {
+        for (var i in variantes) {
+            variantes[i].style.display = "none";
+        }
+        
+        // Luego, muestra la variante seleccionada
+        if (variantes[numeroVariante]) {
+            variantes[numeroVariante].style.display = "block";
+        }
+    }
+}
+
 window.onload = function() {
     var linea = localStorage.getItem("linea");
+    var lineamostrar;
     if (linea) {
         var lineasBuses = {
             1: document.getElementById("linea1"),
             2: document.getElementById("linea2"),
             // Añade más líneas según sea necesario
         };
+
+        if (linea == 1){
+            lineamostrar = document.getElementById("linea1variante1");
+        } 
+
+        
+
         if (lineasBuses[linea]) {
             lineasBuses[linea].style.display = "block";
+            lineamostrar.style.display = "block";
         }
+
     }
 }
