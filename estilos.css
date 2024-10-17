@@ -1,6 +1,8 @@
 :root{
     --color-fondo : #ffffff;
     --color-titulo-contenedor: #4daa57;
+    --color-titulo-aviso: #a12e2e;
+    --color-texto-aviso:#f3e0e0;
     --color-titulo-texto: #f0fff1;
     --color-fondo-contenedor: #393e41;
     --color-texto-contendor: #ffffff;
@@ -37,6 +39,44 @@ body{
 a{
     text-decoration: none;
     color: inherit;
+}
+#noUbi h2{
+    background-color: var(--color-titulo-aviso);
+    font-family: JostSemiBold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    color: var(--color-texto-aviso);
+}
+
+#noUbi button{
+    display: block; /* Hace que el input se comporte como un bloque */
+    margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
+    background-color: grey;
+    color: snow;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: JostRegular;
+    padding: 10px; /* Espacio interno dentro del input */
+    width: 50%; /* Controla el ancho del input si es necesario */
+    text-align: center;
+}
+
+#ubicacion{
+    display: block; /* Hace que el input se comporte como un bloque */
+    margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
+    background-color: var(--color-fondo-botonbuscar);
+    color: var(--color-texto-botonbuscar);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: JostRegular;
+    padding: 10px; /* Espacio interno dentro del input */
+    width: 50%; /* Controla el ancho del input si es necesario */
+    text-align: center;
+    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 #busquedaRapidaLinea{

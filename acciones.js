@@ -100,3 +100,36 @@ window.onload = function() {
 
     }
 }
+
+
+//ubicacion
+document.getElementById('botonUbicacion').addEventListener('click', () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        document.getElementById('locationOutput').textContent = "La geolocalización no es soportada por este navegador.";
+    }
+});
+
+function showPosition(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    document.getElementById('locationOutput').textContent = `Tu ubicación es: Latitude: ${latitude}, Longitude: ${longitude}`;
+}
+
+function showError(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            document.getElementById('locationOutput').textContent = "Usuario denegó la solicitud de Geolocalización.";
+            break;
+        case error.POSITION_UNAVAILABLE:
+            document.getElementById('locationOutput').textContent = "La información de ubicación no está disponible.";
+            break;
+        case error.TIMEOUT:
+            document.getElementById('locationOutput').textContent = "La solicitud para obtener la ubicación ha caducado.";
+            break;
+        case error.UNKNOWN_ERROR:
+            document.getElementById('locationOutput').textContent = "Se ha producido un error desconocido.";
+            break;
+    }
+}
