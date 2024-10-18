@@ -355,7 +355,15 @@ const paradas = {
     "Av. Los Cipreses, 63": {"id": "pa-363"}*/
 };
 
-document.getElementById('botonUbicacion').addEventListener('click', () => {
+// Función que se llama al cargar la página
+window.onload = () => {
+    obtenerUbicacion(); // Llama a la función para obtener la ubicación automáticamente
+};
+
+// Añadimos el evento al botón para aquellos casos en que se necesite
+document.getElementById('botonUbicacion').addEventListener('click', obtenerUbicacion);
+
+function obtenerUbicacion() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             const userLat = position.coords.latitude;
@@ -365,9 +373,9 @@ document.getElementById('botonUbicacion').addEventListener('click', () => {
 
             // Verificamos si se encontró una parada
             if (nearestStop) {
-                var dataAVisualizar = nearestStop.id
-                var nombreAVisualizar = nearestStop.name
-                visualizarData(dataAVisualizar, nombreAVisualizar)
+                var dataAVisualizar = nearestStop.id;
+                var nombreAVisualizar = nearestStop.name;
+                visualizarData(dataAVisualizar, nombreAVisualizar);
             } else {
                 document.getElementById('locationOutput').textContent = "No se encontraron paradas cercanas.";
             }
@@ -375,7 +383,7 @@ document.getElementById('botonUbicacion').addEventListener('click', () => {
     } else {
         document.getElementById('locationOutput').textContent = "La geolocalización no es soportada por este navegador.";
     }
-});
+}
 
 // Función para encontrar la parada más cercana
 function findNearestStop(userLat, userLng, paradas) {
@@ -429,8 +437,8 @@ function showError(error) {
     }
 }
 
-function visualizarData(id, nombre){
-    document.getElementById("cargaParadas").style.display = "block"
+function visualizarData(id, nombre) {
+    document.getElementById("cargaParadas").style.display = "block";
     document.getElementById("noUbi").style.display = "none";
     document.getElementById("nombreParada").textContent = nombre;
 }

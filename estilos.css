@@ -52,8 +52,24 @@ a{
 }
 #cargaParadas{
     display: none;
-}
+} 
 
+#botonRegreso{
+    display: block; /* Hace que el input se comporte como un bloque */
+    margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
+    background-color: var(--color-titulo-aviso);
+    color: var(--color-texto-aviso);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: JostRegular;
+    padding: 10px; /* Espacio interno dentro del input */
+    width: 50%; /* Controla el ancho del input si es necesario */
+    text-align: center;
+    margin-bottom: 5px;
+    margin-bottom: 25px;
+}
+ 
 #nombreParada{
     background-color: #3a5683;
     width: 80%;
