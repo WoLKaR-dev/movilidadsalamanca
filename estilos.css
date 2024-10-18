@@ -18,6 +18,8 @@
     --color-fonfo-tuparada:#acccff;
     --color-fondo-botonbuscar: #528b60;
     --color-texto-botonbuscar:#f0fff1;
+    --color-titulo-paradas: #0089d8;
+    --color-texto-paradas: #d1eeff;
 }
 
 @font-face {
@@ -47,6 +49,31 @@ a{
     border: none;
     border-radius: 8px;
     color: var(--color-texto-aviso);
+}
+#cargaParadas{
+    display: none;
+}
+
+#nombreParada{
+    background-color: #3a5683;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+}
+
+#cargaParadas h2{
+    background-color: var(--color-titulo-paradas);
+    font-family: JostSemiBold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    color: var(--color-texto-paradas);
+}
+
+#pa-5{
+    display: none;
 }
 
 #noUbi button{
