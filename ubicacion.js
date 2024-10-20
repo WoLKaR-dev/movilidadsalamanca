@@ -1,48 +1,166 @@
 // Definimos las paradas directamente en un objeto de JavaScript
 const paradas = {
     "Pº. Los Madroños, s/n": {
-    "id": "pa-1",
-    "coordenadas": { "lat": 40.4165, "lng": -3.70256 },
-    "linea_7": ["7:35", "7:55", "8:15", "8:35", "8:55", "9:15", "9:40", "10:10", "10:35", "10:55", "11:15", "11:35","11:55", "12:15", "12:35", "12:55", "13:15", "13:35", "13:55", "14:15", "14:35", "14:55", "15:15", "15:35","15:55"]
+        "id": "pa-1",
+        "coordenadas": { "lat": 40.9731, "lng": -5.6503 },
+        "linea_7 (Hospital Universitario)": {
+            "laborales": ["7:35", "7:55", "8:15", "8:35", "8:55", "9:15", "9:40", "10:10", "10:35", "10:55", "11:15", "11:35", "11:55", "12:15", "12:35", "12:55", "13:15", "13:35", "13:55", "14:15", "14:35", "14:55", "15:15", "15:35", "15:55"],
+            "sabado": ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00"],
+            "domingo": ["9:30", "10:30", "11:30", "12:30", "13:30"]
+        },
     },
-    "Pº. Estación, 31": { "id": "pa-2", "coordenadas": { "lat": 40.418, "lng": -3.705 } },
-    "Pza. España, 7": { "id": "pa-3", "coordenadas": { "lat": 40.423, "lng": -3.715 } },
-    "Pza. Del Empresario, s/n": { "id": "pa-4", "coordenadas": { "lat": 40.430, "lng": -3.720 } },  
-    "Pza. Del Fronton": {"id":"pa-5" , "coordenadas": { "lat": 41.0079722, "lng": -5.648055555555555 } },
-    /*
-    "Avda. Lasalle, 4": {"id": "pa-8"},
-    "Avda. Lasalle, 58": {"id": "pa-9"},
-    "Avda. Lasalle, fren. 95": {"id": "pa-10"},
-    "Avda. Lasalle, fren. 143": {"id": "pa-11"},
-    "Avda. Lasalle, 152": {"id": "pa-12"},
-    "Avda. Juan Pablo II, 12": {"id": "pa-13"},
-    "Avda. Juan Pablo II, frente 46": {"id": "pa-14"},
-    "Avda. Juan Pablo II, s/n": {"id": "pa-15"},
-    "C/ Coria, s/n (Junto Iglesia)": {"id": "pa-16"},
-    "Avda. Juan Pablo II, 2s/n": {"id": "pa-17"},
-    "Avda. Juan Pablo II, 71": {"id": "pa-18"},
-    "Pza. Tejares, 2": {"id": "pa-19"},
-    "Avda. Lasalle, 179": {"id": "pa-20"},
-    "Avda. Lasalle, 143": {"id": "pa-21"},
-    "Avda. Lasalle, 95": {"id": "pa-22"},
-    "Avda. Lasalle, 47": {"id": "pa-23"},
-    "Avda. Lasalle, 1": {"id": "pa-24"},
-    "Ctra. La Fregeneda, 15": {"id": "pa-25"},
-    "Avda. Reyes de España, 23": {"id": "pa-26"},
-    "C/ Gran Vía, 75": {"id": "pa-27"},
-    "C/ Gran Vía, 25": {"id": "pa-28"},
-    "Pº. Estación, 16": {"id": "pa-29"},
-    "Pº. Estación, 78": {"id": "pa-30"},
-    "Pº. Estación, 106": {"id": "pa-31"},
-    "Pº. Estación, s/n": {"id": "pa-32"},
-    "Avda. Mirat, 22": {"id": "pa-33"},
-    "Pza. Gabriel y Galán, s/n": {"id": "pa-34"},
-    "Pº. Carmelitas, 94": {"id": "pa-35"},
-    "Pº. San Vicente, 106": {"id": "pa-36"},
-    "Pº. Desengaño, s/n": {"id": "pa-37"},
-    "Pº. Desengaño, 2s/n": {"id": "pa-38"},
-    "Pº. San Vicente, 101": {"id": "pa-39"},
-    "Pº. Carmelitas, 85": {"id": "pa-40"},
+    "Pº. Estación, 31": { 
+        "id": "pa-2", 
+        "coordenadas": { "lat": 40.9694, "lng": -5.6560 } 
+    },
+    "Pza. España, 7": { 
+        "id": "pa-3", 
+        "coordenadas": { "lat": 40.9687, "lng": -5.6582 } 
+    },
+    "Pza. Del Empresario, s/n": { 
+        "id": "pa-4", 
+        "coordenadas": { "lat": 40.9675, "lng": -5.6591 } 
+    },  
+    "Avda. Reyes de España, 32": { 
+        "id": "pa-6", 
+        "coordenadas": { "lat": 40.9574, "lng": -5.6655 } 
+    },
+    "Ctra. La Fregeneda, 8": { 
+        "id": "pa-7", 
+        "coordenadas": { "lat": 40.9558, "lng": -5.6721} 
+    },
+    "Avda. Lasalle, 4": { 
+        "id": "pa-8", 
+        "coordenadas": { "lat": 40.9550, "lng": -5.6768 } 
+    },
+    "Avda. Lasalle, 58": { 
+        "id": "pa-9", 
+        "coordenadas": { "lat": 40.9550, "lng": -5.6802 } 
+    },
+    "Avda. Lasalle, fren. 95": { 
+        "id": "pa-10", 
+        "coordenadas": { "lat": 40.9550, "lng": -5.6837 } 
+    },
+   "Avda. Lasalle, fren. 143": {
+        "id": "pa-11",
+        "coordenadas": { "lat": 40.9550, "lng": -5.6870 }
+    },
+    "Avda. Lasalle, 152": {
+        "id": "pa-12",
+        "coordenadas": { "lat": 40.9550, "lng": -5.6897 }
+    },
+    "Avda. Juan Pablo II, 12": {
+        "id": "pa-13",
+        "coordenadas": { "lat": 40.9549, "lng": -5.6944 }
+    },
+    "Avda. Juan Pablo II, frente 46": {
+        "id": "pa-14",
+        "coordenadas": { "lat": 40.9553, "lng": -5.7004 }
+    },
+    "Avda. Juan Pablo II, s/n": {
+        "id": "pa-15",
+        "coordenadas": { "lat": 40.9554, "lng": -5.7031 }
+    },
+    "C/ Coria, s/n (Junto Iglesia)": {
+        "id": "pa-16",
+        "coordenadas": { "lat": 40.9549, "lng": -5.7060 }
+    },
+    "Avda. Juan Pablo II, s/n": {
+        "id": "pa-17",
+        "coordenadas": { "lat": 40.9553, "lng": -5.7030 }
+    },
+    "Avda. Juan Pablo II, 71": {
+        "id": "pa-18",
+        "coordenadas": { "lat": 40.9552, "lng": -5.7002 }
+    },
+    "Pza. Tejares, 2": {
+        "id": "pa-19",
+        "coordenadas": { "lat": 40.9548, "lng": -5.6943 }
+    },
+    "Avda. Lasalle, 179": {
+        "id": "pa-20",
+        "coordenadas": { "lat": 40.9548, "lng": -5.6896 }
+    },
+   "Avda. Lasalle, 143": {
+        "id": "pa-21",
+        "coordenadas": { "lat": 40.9548, "lng": -5.6868 }
+    },
+    "Avda. Lasalle, 95": {
+        "id": "pa-22",
+        "coordenadas": { "lat": 40.9549, "lng": -5.6836 }
+    },
+    "Avda. Lasalle, 47": {
+        "id": "pa-23",
+        "coordenadas": { "lat": 40.9549, "lng": -5.6802 }
+    },
+    "Avda. Lasalle, 1": {
+        "id": "pa-24",
+        "coordenadas": { "lat": 40.9549, "lng": -5.6767 }
+    },
+    "Ctra. La Fregeneda, 15": {
+        "id": "pa-25",
+        "coordenadas": { "lat": 40.9558, "lng": -5.6721 }
+    },
+    "Avda. Reyes de España, 23": {
+        "id": "pa-26",
+        "coordenadas": { "lat": 40.9582, "lng": -5.6650 }
+    },
+    "C/ Gran Vía, 75": {
+        "id": "pa-27",
+        "coordenadas": { "lat": 40.9623, "lng": -5.6622 }
+    },
+    "C/ Gran Vía, 25": {
+        "id": "pa-28",
+        "coordenadas": { "lat": 40.9669, "lng": -5.6594 }
+    },
+    "Pº. Estación, 16": {
+        "id": "pa-29",
+        "coordenadas": { "lat": 40.9690, "lng": -5.6569 }
+    },
+    "Pº. Estación, 78": {
+        "id": "pa-30",
+        "coordenadas": { "lat": 40.9705, "lng": -5.6525 }
+    },
+    "Pº. Estación, 106": {
+        "id": "pa-31",
+        "coordenadas": { "lat": 40.9713, "lng": -5.6511 }
+    },
+    "Pº. Estación, s/n": {
+        "id": "pa-32",
+        "coordenadas": { "lat": 40.9725, "lng": -5.6486 }
+    },
+    "Avda. Mirat, 22": {
+        "id": "pa-33",
+        "coordenadas": { "lat": 40.9694, "lng": -5.6604 }
+    },
+    "Pza. Gabriel y Galán, s/n": {
+        "id": "pa-34",
+        "coordenadas": { "lat": 40.9698, "lng": -5.6621 }
+    },
+    "Pº. Carmelitas, 94": {
+        "id": "pa-35",
+        "coordenadas": { "lat": 40.9675, "lng": -5.6686 }
+    },
+    "Pº. San Vicente, 106": {
+        "id": "pa-36",
+        "coordenadas": { "lat": 40.9635, "lng": -5.6737 }
+    },
+    /*"Pº. Desengaño, s/n": {
+        "id": "pa-37",
+        "coordenadas": "NA"
+    },
+    "Pº. Desengaño, 2s/n": {
+        "id": "pa-38",
+        "coordenadas": "NA"
+    },*/
+    "Pº. San Vicente, 101": {
+        "id": "pa-39",
+        "coordenadas": { "lat": 40.9645, "lng": -5.6725 }
+    },
+    "Pº. Carmelitas, 85": {
+        "id": "pa-40",
+        "coordenadas": { "lat": 40.9673, "lng": -5.6688 }
+    },/*
     "Avda. Mirat, 43": {"id": "pa-41"},
     "Avda. Mirat, 13": {"id": "pa-42"},
     "Ctra. Ledesma, 137": {"id": "pa-43"},
@@ -354,14 +472,29 @@ const paradas = {
     "Av. Los Cipreses, 48": {"id": "pa-362"},
     "Av. Los Cipreses, 63": {"id": "pa-363"}*/
 };
-
 // Función que se llama al cargar la página
+// Variable para almacenar el intervalo de actualización
+// Función que se llama al cargar la página// Función que se llama al cargar la página
 window.onload = () => {
     obtenerUbicacion(); // Llama a la función para obtener la ubicación automáticamente
 };
 
 // Añadimos el evento al botón para aquellos casos en que se necesite
 document.getElementById('botonUbicacion').addEventListener('click', obtenerUbicacion);
+
+// Función para obtener el tipo de día (laboral, sábado o domingo)
+function obtenerTipoDeDia() {
+    const ahora = new Date();
+    const diaSemana = ahora.getDay(); // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
+    
+    if (diaSemana === 0) {
+        return "domingo";
+    } else if (diaSemana === 6) {
+        return "sabado";
+    } else {
+        return "laborales";
+    }
+}
 
 function obtenerUbicacion() {
     if (navigator.geolocation) {
@@ -373,8 +506,8 @@ function obtenerUbicacion() {
 
             // Verificamos si se encontró una parada
             if (nearestStop) {
-                var dataAVisualizar = nearestStop.id;
-                var nombreAVisualizar = nearestStop.name;
+                const dataAVisualizar = nearestStop.id;
+                const nombreAVisualizar = nearestStop.name;
                 visualizarData(dataAVisualizar, nombreAVisualizar);
             } else {
                 document.getElementById('locationOutput').textContent = "No se encontraron paradas cercanas.";
@@ -383,6 +516,86 @@ function obtenerUbicacion() {
     } else {
         document.getElementById('locationOutput').textContent = "La geolocalización no es soportada por este navegador.";
     }
+}
+
+// Función para visualizar los datos de la parada
+function visualizarData(id, nombre) {
+    document.getElementById("cargaParadas").style.display = "block";
+    document.getElementById("noUbi").style.display = "none";
+    document.getElementById("nombreParada").textContent = nombre;
+
+    // Limpiar la tabla antes de llenarla con nueva información
+    const tablaHorarios = document.getElementById("tablaHorarios").getElementsByTagName("tbody")[0];
+    tablaHorarios.innerHTML = ""; // Limpia la tabla
+
+    const tipoDia = obtenerTipoDeDia(); // Obtener si es laboral, sábado o domingo
+
+    // Obtener todas las líneas de la parada
+    const lineas = Object.keys(paradas[nombre]).filter(linea => linea.startsWith("linea_"));
+
+    // Crear una fila para cada línea y el tiempo restante
+    lineas.forEach(linea => {
+        const horarios = paradas[nombre][linea][tipoDia]; // Obtiene los horarios según el día
+        if (horarios) { // Verificar que haya horarios para el día
+            const fila = document.createElement("tr");
+            const celdaLinea = document.createElement("td");
+            const celdaTiempo = document.createElement("td");
+
+            celdaLinea.textContent = linea.replace("linea_", "Línea "); // Formato del nombre de la línea
+            celdaTiempo.textContent = calcularTiempoRestante(horarios); // Calcular el tiempo restante
+
+            // Almacenar la referencia a la celda de tiempo para futuras actualizaciones
+            fila.dataset.horarios = JSON.stringify(horarios);
+            fila.appendChild(celdaLinea);
+            fila.appendChild(celdaTiempo);
+            tablaHorarios.appendChild(fila);
+        }
+    });
+
+    // Iniciar el intervalo para actualizar el tiempo cada minuto
+    if (updateInterval) {
+        clearInterval(updateInterval); // Limpiar cualquier intervalo existente
+    }
+    updateInterval = setInterval(() => {
+        actualizarTablaHorarios(tablaHorarios);
+    }, 60000); // Actualizar cada 60 segundos (60000 ms)
+}
+
+// Función para actualizar el tiempo en la tabla
+function actualizarTablaHorarios(tabla) {
+    for (let i = 0; i < tabla.rows.length; i++) {
+        const horarios = JSON.parse(tabla.rows[i].dataset.horarios);
+        const tiempoRestanteCelda = tabla.rows[i].cells[1];
+
+        tiempoRestanteCelda.textContent = calcularTiempoRestante(horarios);
+    }
+}
+
+// Función para calcular el tiempo restante hasta el próximo bus
+function calcularTiempoRestante(horarios) {
+    const ahora = new Date();
+    let minRestante = Infinity;
+
+    // Iterar a través de cada horario para encontrar el tiempo restante
+    horarios.forEach(hora => {
+        const [horas, minutos] = hora.split(':').map(Number);
+        const proximaHora = new Date(ahora.getFullYear(), ahora.getMonth(), ahora.getDate(), horas, minutos);
+
+        // Si la hora ya ha pasado hoy, sumar un día
+        if (proximaHora < ahora) {
+            proximaHora.setDate(proximaHora.getDate() + 1);
+        }
+
+        const diferencia = proximaHora - ahora; // Diferencia en milisegundos
+        const minutosRestantes = Math.floor(diferencia / 1000 / 60); // Convertir a minutos
+        
+        // Guardar el tiempo mínimo restante
+        if (minutosRestantes >= 0) {
+            minRestante = Math.min(minRestante, minutosRestantes);
+        }
+    });
+
+    return minRestante !== Infinity ? `${minRestante} min` : "Ya pasó"; // Retornar el tiempo restante
 }
 
 // Función para encontrar la parada más cercana
@@ -420,6 +633,7 @@ function degreesToRadians(degrees) {
     return degrees * (Math.PI / 180);
 }
 
+// Manejo de errores de geolocalización
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
@@ -435,10 +649,4 @@ function showError(error) {
             document.getElementById('locationOutput').textContent = "Se ha producido un error desconocido.";
             break;
     }
-}
-
-function visualizarData(id, nombre) {
-    document.getElementById("cargaParadas").style.display = "block";
-    document.getElementById("noUbi").style.display = "none";
-    document.getElementById("nombreParada").textContent = nombre;
 }

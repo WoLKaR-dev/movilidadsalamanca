@@ -3,68 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MovilidadSalamanca</title>
     <link rel="stylesheet" href="estilos.css">
     <script src="acciones.js" defer></script>
     <script src="ubicacion.js" defer></script>
 </head>
 <body>
 
-<div id="contenedor">
-
+<div class="contenedor">
     <div id = "noUbi">
         <h2>TU PARADA ACTUAL</h2>
-        <p id="parrafo">Permítenos acceder a tu ubicación para mostrarte tu parada actual.</p>
+        <p class="parrafo">Permítenos acceder a tu ubicación para mostrarte tu parada actual.</p>
         <button id="botonUbicacion">ACCEDER A LA UBICACION</button>
         <p id="locationOutput" style="text-align: center;"></p>
         <br>
     </div>
-    <div id = "cargaParadas">
+    <div id="cargaParadas" style="display:none;">
         <h2>TU PARADA ACTUAL</h2>
         <div id="nombreParada">HOLA :D</div>
         <br>
-    </div>
+        <table id="tablaHorarios">
+            <thead>
+                <tr>
+                    <th>LÍNEA</th>
+                    <th>TIEMPO RESTANTE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se llenarán dinámicamente con JavaScript -->
+                 
+            </tbody>
+        </table>
+        <br>
+    </div>      
 </div>    
 
-<div id="mainPage">
-            <h1 id = "tituloGrande">INICIO</h1>
-            <h3 id="descripcion">CONSULTA LOS PRINCIPALES HORARIOS DE AUTOBUSES URBANOS DE SALAMANCA</h3>
+<div class="mainPage">
+            <h1 class = "tituloGrande">INICIO</h1>
+            <h3 class="descripcion">CONSULTA LOS PRINCIPALES HORARIOS DE AUTOBUSES URBANOS DE SALAMANCA</h3>
     
-    <div id="contenedor">
-        <h2 id="titulo">¿CUÁL ES TU LÍNEA?</h2>
-        <p id="parrafo">¿Qué línea planeas utilizar?</p>
-        <input type="number" id="busquedaRapidaLinea">
-        <button id = "boton" onclick="nuevaLinea(1)">BUSCAR</button>
-        <button id="opcion" onclick="redirigirMetropolitano()">BUSCO OPCIONES METROPOLITANAS (REDIRECCIÓN A LA WEB BUSES DE AVANZA SALAMANCA)</button>
-        <button id="opcion" onclick="redirigirViajes()">BUSCO OPCIONES DE VIAJE (REDIRECCIÓN A LA WEB DE ESTACIÓN DE BUSES DE SALAMANCA)</button>
-        <p id="parrafo">Todas las líneas: </p>
-        <button id="botonLinea" onclick="nuevaLinea(1)">Línea 1: Chinchibarra - Buenos Aires (Por centro)</button>
-        <button id="botonLinea" onclick="nuevaLinea(2)">Línea 2: Pizarrales - San Julián</button>
-        <button id="botonLinea" onclick="location.href='linea3.html'">Línea 3: Garrido - San José (Por centro)</button>
-        <button id="botonLinea" onclick="location.href='linea4.html'">Línea 4: Cementerio - Puente Ladrillo</button>
-        <button id="botonLinea" onclick="location.href='linea5.html'">Línea 5: Ciudad Jardín - Los Alcaldes</button>
-        <button id="botonLinea" onclick="location.href='linea6.html'">Línea 6: Garrido - San José (Por Hospitales)</button>
-        <button id="botonLinea" onclick="location.href='linea7.html'">Línea 7: Hospital Universitario - Prosperidad</button>
-        <button id="botonLinea" onclick="location.href='linea8.html'">Línea 8: Aldehuela - Vista Hermosa</button>
-        <button id="botonLinea" onclick="location.href='linea9.html'">Línea 9: Capuchinos - Zurguén</button>
-        <button id="botonLinea" onclick="location.href='linea10.html'">Línea 10: Puente Ladrillo - Vista Hermosa</button>
-        <button id="botonLinea" onclick="location.href='linea11.html'">Línea 11: Los Cipreses - Buenos Aires (Por Hospitales)</button>
-        <button id="botonLinea" onclick="location.href='linea12.html'">Línea 12: Barrio Blanco - Montalvo II</button>
-        <button id="botonLinea" onclick="location.href='linea13.html'">Línea 13: Huerta Otea - San José</button>
-        <button id="botonLinea" onclick="location.href='linea14.html'">Línea 14: Zurguén - Huerta Otea</button>
-        <button id="botonLinea" onclick="location.href='linea15.html'">Línea 15: Capuchinos - Hospital Universitario</button>
-        <button id="botonLinea" onclick="location.href='linea26.html'">Línea 26: Refuerzo Línea 13</button>
-        <button id="botonLinea" onclick="location.href='linea28.html'">Línea 28: Refuerzo Línea 10</button>
-        <button id="botonLinea" onclick="location.href='linea91.html'">Línea 91: Servicio Nocturno (Sentido Norte)</button>
-        <button id="botonLinea" onclick="location.href='linea92.html'">Línea 92: Servicio Nocturno (Sentido Sur)</button>
-        <button id="botonLinea" onclick="location.href='linea93.html'">Línea 93: Especial Aldehuela</button>
-        <button id="botonLinea" onclick="location.href='linea94.html'">Línea 94: Rastro Pizarrales</button>
-        <button id="botonLinea" onclick="location.href='linea95.html'">Línea 95: Lunes de Aguas</button>
-        <button id="botonLinea" onclick="location.href='linea96.html'">Línea 96: Los Santos</button>
-        <button id="botonLinea" onclick="location.href='linea97.html'">Línea 97: Rastro Aldehuela</button>
-        <button id="botonLinea" onclick="location.href='linea98.html'">Línea 98: Ferias</button>
-        <button id="botonLinea" onclick="location.href='linea99.html'">Línea 99: Agropecuaria</button>
-        <button id="botonLinea" onclick="location.href='linea699.html'">Línea 699: Servicio Especial</button>
+    <div class="contenedor">
+        <h2 class="titulo">¿CUÁL ES TU LÍNEA?</h2>
+        <p class="parrafo">¿Qué línea planeas utilizar?</p>
+        <input type="number" class="busquedaRapidaLinea">
+        <button class = "boton" onclick="nuevaLinea(1)">BUSCAR</button>
+        <button class="opcion" onclick="redirigirMetropolitano()">BUSCO OPCIONES METROPOLITANAS (REDIRECCIÓN A LA WEB BUSES DE AVANZA SALAMANCA)</button>
+        <button class="opcion" onclick="redirigirViajes()">BUSCO OPCIONES DE VIAJE (REDIRECCIÓN A LA WEB DE ESTACIÓN DE BUSES DE SALAMANCA)</button>
+        <p class="parrafo">Todas las líneas: </p>
+        <button class="botonLinea" onclick="nuevaLinea(1)">Línea 1: Chinchibarra - Buenos Aires (Por centro)</button>
+        <button class="botonLinea" onclick="nuevaLinea(2)">Línea 2: Pizarrales - San Julián</button>
+        <button class="botonLinea" onclick="location.href='linea3.html'">Línea 3: Garrido - San José (Por centro)</button>
+        <button class="botonLinea" onclick="location.href='linea4.html'">Línea 4: Cementerio - Puente Ladrillo</button>
+        <button class="botonLinea" onclick="location.href='linea5.html'">Línea 5: Ciudad Jardín - Los Alcaldes</button>
+        <button class="botonLinea" onclick="location.href='linea6.html'">Línea 6: Garrido - San José (Por Hospitales)</button>
+        <button class="botonLinea" onclick="location.href='linea7.html'">Línea 7: Hospital Universitario - Prosperidad</button>
+        <button class="botonLinea" onclick="location.href='linea8.html'">Línea 8: Aldehuela - Vista Hermosa</button>
+        <button class="botonLinea" onclick="location.href='linea9.html'">Línea 9: Capuchinos - Zurguén</button>
+        <button class="botonLinea" onclick="location.href='linea10.html'">Línea 10: Puente Ladrillo - Vista Hermosa</button>
+        <button class="botonLinea" onclick="location.href='linea11.html'">Línea 11: Los Cipreses - Buenos Aires (Por Hospitales)</button>
+        <button class="botonLinea" onclick="location.href='linea12.html'">Línea 12: Barrio Blanco - Montalvo II</button>
+        <button class="botonLinea" onclick="location.href='linea13.html'">Línea 13: Huerta Otea - San José</button>
+        <button class="botonLinea" onclick="location.href='linea14.html'">Línea 14: Zurguén - Huerta Otea</button>
+        <button class="botonLinea" onclick="location.href='linea15.html'">Línea 15: Capuchinos - Hospital Universitario</button>
+        <button class="botonLinea" onclick="location.href='linea26.html'">Línea 26: Refuerzo Línea 13</button>
+        <button class="botonLinea" onclick="location.href='linea28.html'">Línea 28: Refuerzo Línea 10</button>
+        <button class="botonLinea" onclick="location.href='linea91.html'">Línea 91: Servicio Nocturno (Sentido Norte)</button>
+        <button class="botonLinea" onclick="location.href='linea92.html'">Línea 92: Servicio Nocturno (Sentido Sur)</button>
+        <button class="botonLinea" onclick="location.href='linea93.html'">Línea 93: Especial Aldehuela</button>
+        <button class="botonLinea" onclick="location.href='linea94.html'">Línea 94: Rastro Pizarrales</button>
+        <button class="botonLinea" onclick="location.href='linea95.html'">Línea 95: Lunes de Aguas</button>
+        <button class="botonLinea" onclick="location.href='linea96.html'">Línea 96: Los Santos</button>
+        <button class="botonLinea" onclick="location.href='linea97.html'">Línea 97: Rastro Aldehuela</button>
+        <button class="botonLinea" onclick="location.href='linea98.html'">Línea 98: Ferias</button>
+        <button class="botonLinea" onclick="location.href='linea99.html'">Línea 99: Agropecuaria</button>
+        <button class="botonLinea" onclick="location.href='linea699.html'">Línea 699: Servicio Especial</button>
         <br>
     </div>
 </div>

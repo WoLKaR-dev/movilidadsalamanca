@@ -52,9 +52,37 @@ a{
 }
 #cargaParadas{
     display: none;
+    
 } 
 
-#botonRegreso{
+#tablaHorarios{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+#tablaHorarios th{
+    border: 1px solid;
+    padding: 8px;
+    background-color: var(--color-leyenda1);
+    color: var(--color-texto);
+    text-align: center;
+    border-color: #000000;
+    color: var(--color-leyenda-texto);
+}
+
+#tablaHorarios td{
+    border: 1px solid;
+    padding: 8px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+    border-color: #000000;
+    color: var(--color-fondo-opciones);
+}
+
+
+
+.botonRegreso{
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
     background-color: var(--color-titulo-aviso);
@@ -88,7 +116,7 @@ a{
     color: var(--color-texto-paradas);
 }
 
-#pa-5{
+.pa-5{
     display: none;
 }
 
@@ -106,7 +134,7 @@ a{
     text-align: center;
 }
 
-#ubicacion{
+.ubicacion{
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
     background-color: var(--color-fondo-botonbuscar);
@@ -122,7 +150,7 @@ a{
     margin-bottom: 25px;
 }
 
-#busquedaRapidaLinea{
+.busquedaRapidaLinea{
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
     background-color: var(--boton-busqueda-fondo);
@@ -137,7 +165,7 @@ a{
     margin-bottom: 5px;
 }
 
-#contenedorListaLineas{
+.contenedorListaLineas{
     background-color: var(--color-titulo-contenedor);
     border: none;
     border-radius: 10px;
@@ -145,7 +173,7 @@ a{
     text-align: center;
     text-decoration: none;
 }
-#contenedor {
+.contenedor {
     background-color: var(--color-fondo-contenedor);
     border: none;
     border-radius: 10px;
@@ -155,7 +183,7 @@ a{
     /* No centramos todo el contenido del contenedor */
 }
 
-#introducir {
+.introducir {
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
     background-color: var(--color-boton-input);
@@ -169,7 +197,7 @@ a{
     text-align: center;
 }
 
-#titulo{
+.titulo{
     background-color: var(--color-titulo-contenedor);
     font-family: JostSemiBold;
     text-align: center;
@@ -178,26 +206,26 @@ a{
     color: var(--color-titulo-texto);
 }
 
-#parrafo{
+.parrafo{
     color: var(--color-texto-contendor);
     justify-content: left;
     margin-left: 5%;
     font-family: JostSemiBold;
 }
-#tituloGrande{
+.tituloGrande{
     font-family: JostBold;
     color: #303633;
     text-align: center;
     text-wrap:wrap;
 }
-#descripcion{
+.descripcion{
     color: #303633;
     text-align: center;
     justify-content: center;
     font-family: JostSemiBold;
 }
 
-#boton{
+.boton{
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
     background-color: var(--color-fondo-botonbuscar);
@@ -213,7 +241,7 @@ a{
     margin-bottom: 25px;
 }
 
-#opcion{
+.opcion{
     background-color: var(--color-fondo-opciones);
     display: block; /* Hace que el input se comporte como un bloque */
     margin: 0 auto; /* Auto en los márgenes horizontales lo centra */
@@ -228,7 +256,7 @@ a{
     text-align: center;
 }
 
-#botonLinea{
+.botonLinea{
     display: block;
     margin: 0 auto;
     width: 90%;
@@ -246,13 +274,13 @@ a{
 
 
 
-#tablaHorarios{
+.tablaHorarios{
     border-collapse: collapse;
     margin: auto;
     width: 80%;
 }
 
-#celdaEncabezado{
+.celdaEncabezado{
     border: 1px solid;
     padding: 8px;
     background-color: var(--color-leyenda1);
@@ -262,7 +290,7 @@ a{
     color: var(--color-leyenda-texto);
 }
 
-#celdaTabla{
+.celdaTabla{
     border: 1px solid;
     padding: 8px;
     background-color: var(--color-fondo);
@@ -282,11 +310,5 @@ a{
     display: none;
 }
 #linea1variante2{
-    display: none;
-}
-#linea1variante3{
-    display: none;
-}
-#linea1variante4{
     display: none;
 }
